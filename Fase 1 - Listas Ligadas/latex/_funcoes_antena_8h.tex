@@ -1,0 +1,385 @@
+\doxysection{Funcoes\+Antena.\+h File Reference}
+\hypertarget{_funcoes_antena_8h}{}\label{_funcoes_antena_8h}\index{FuncoesAntena.h@{FuncoesAntena.h}}
+{\ttfamily \#include "{}Structs.\+h"{}}\newline
+Include dependency graph for Funcoes\+Antena.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=173pt]{_funcoes_antena_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{_funcoes_antena_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_funcoes_antena_8h_a8e8a3a31dd27a103386d99ce897da0a8}{Criar\+Antena}} (char frequencia, int x, int y)
+\begin{DoxyCompactList}\small\item\em Cria uma nova antena com os parâmetros fornecidos. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_funcoes_antena_8h_a1da84b8b8a59606696bcd20017a24517}{Inserir\+Antena\+Inicio}} (\mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*}lista, char freq, int x, int y)
+\begin{DoxyCompactList}\small\item\em Insere uma nova antena no início da lista. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_funcoes_antena_8h_ac1554f383341b6169dbaed264bdfc8af}{Inserir\+Antena\+Fim}} (\mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*}lista, char freq, int x, int y)
+\begin{DoxyCompactList}\small\item\em Insere uma nova antena no final da lista. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_funcoes_antena_8h_ab9e381e49132732b43c8dbf14e2cbe3b}{Remover\+Antena}} (\mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*}lista, int x, int y)
+\begin{DoxyCompactList}\small\item\em Remove uma antena da lista, dado as suas coordenadas. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_funcoes_antena_8h_ab768b1a2f93bbcb3b02c47ddabc4c2a5}{Destroi\+Lista}} (\mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*}lista)
+\begin{DoxyCompactList}\small\item\em Destrói a lista de antenas, liberando a memória alocada. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_funcoes_antena_8h_a6324d437ccd5fc28bbdac943c7831adc}{Listar\+Antenas}} (\mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*}lista)
+\begin{DoxyCompactList}\small\item\em Lista as antenas presentes na lista ligada. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_funcoes_antena_8h_a4367fd94080b1868035a976374aad312}{Mostrar\+Mapa\+Antenas}} (\mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*}lista, int num\+Linhas, int num\+Colunas)
+\begin{DoxyCompactList}\small\item\em Mostra um mapa com as antenas, de acordo com as suas coordenadas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_funcoes_antena_8h_a8e8a3a31dd27a103386d99ce897da0a8}\index{FuncoesAntena.h@{FuncoesAntena.h}!CriarAntena@{CriarAntena}}
+\index{CriarAntena@{CriarAntena}!FuncoesAntena.h@{FuncoesAntena.h}}
+\doxysubsubsection{\texorpdfstring{CriarAntena()}{CriarAntena()}}
+{\footnotesize\ttfamily \label{_funcoes_antena_8h_a8e8a3a31dd27a103386d99ce897da0a8} 
+\mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*} Criar\+Antena (\begin{DoxyParamCaption}\item[{char}]{frequencia}{, }\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Cria uma nova antena com os parâmetros fornecidos. 
+
+Aloca memória para uma nova antena e inicializa os seus valores com as coordenadas fornecidas e a frequência.
+
+
+\begin{DoxyParams}{Parameters}
+{\em frequencia} & A frequência da antena. \\
+\hline
+{\em x} & A coordenada X da antena. \\
+\hline
+{\em y} & A coordenada Y da antena. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Um ponteiro para a nova antena criada ou NULL caso a alocação falhe.
+\end{DoxyReturn}
+Cria uma nova antena com os parâmetros fornecidos.
+
+Esta função aloca memória para uma nova antena e inicializa os seus campos com os valores fornecidos.
+
+
+\begin{DoxyParams}{Parameters}
+{\em frequencia} & A frequência da antena. \\
+\hline
+{\em x} & A coordenada X da antena no mapa. \\
+\hline
+{\em y} & A coordenada Y da antena no mapa. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ponteiro para a nova antena criada ou NULL se falhar a alocação de memória.
+\end{DoxyReturn}
+Esta função é responsável pela alocação dinâmica de memória para uma estrutura do tipo {\ttfamily \doxylink{struct_antena}{Antena}} e pela inicialização dos seus campos. A função verifica se a alocação de memória foi bem-\/sucedida e, em caso afirmativo, inicializa os campos {\ttfamily frequencia}, {\ttfamily x}, {\ttfamily y} e {\ttfamily prox} da nova antena. Se a alocação de memória falhar, a função retorna {\ttfamily NULL}. 
+
+Definition at line \mbox{\hyperlink{_funcoes_antena_8c_source_l00034}{34}} of file \mbox{\hyperlink{_funcoes_antena_8c_source}{Funcoes\+Antena.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_funcoes_antena_8h_a8e8a3a31dd27a103386d99ce897da0a8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_funcoes_antena_8h_ab768b1a2f93bbcb3b02c47ddabc4c2a5}\index{FuncoesAntena.h@{FuncoesAntena.h}!DestroiLista@{DestroiLista}}
+\index{DestroiLista@{DestroiLista}!FuncoesAntena.h@{FuncoesAntena.h}}
+\doxysubsubsection{\texorpdfstring{DestroiLista()}{DestroiLista()}}
+{\footnotesize\ttfamily \label{_funcoes_antena_8h_ab768b1a2f93bbcb3b02c47ddabc4c2a5} 
+\mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*} Destroi\+Lista (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*}}]{lista}{}\end{DoxyParamCaption})}
+
+
+
+Destrói a lista de antenas, liberando a memória alocada. 
+
+Libera toda a memória associada aos elementos da lista de antenas. A lista é destruída completamente e o ponteiro é retornado como NULL.
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & A lista de antenas a ser destruída. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NULL, pois a lista foi destruída.
+\end{DoxyReturn}
+Destrói a lista de antenas, liberando a memória alocada.
+
+Esta função percorre a lista de antenas e libera a memória de cada elemento.
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & Ponteiro para a lista de antenas a ser destruída. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NULL
+\end{DoxyReturn}
+A função percorre toda a lista, liberando a memória alocada para cada elemento. Quando a lista estiver vazia, o ponteiro será ajustado para NULL. 
+
+Definition at line \mbox{\hyperlink{_funcoes_antena_8c_source_l00156}{156}} of file \mbox{\hyperlink{_funcoes_antena_8c_source}{Funcoes\+Antena.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{_funcoes_antena_8h_ab768b1a2f93bbcb3b02c47ddabc4c2a5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_funcoes_antena_8h_ac1554f383341b6169dbaed264bdfc8af}\index{FuncoesAntena.h@{FuncoesAntena.h}!InserirAntenaFim@{InserirAntenaFim}}
+\index{InserirAntenaFim@{InserirAntenaFim}!FuncoesAntena.h@{FuncoesAntena.h}}
+\doxysubsubsection{\texorpdfstring{InserirAntenaFim()}{InserirAntenaFim()}}
+{\footnotesize\ttfamily \label{_funcoes_antena_8h_ac1554f383341b6169dbaed264bdfc8af} 
+\mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*} Inserir\+Antena\+Fim (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*}}]{lista}{, }\item[{char}]{freq}{, }\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Insere uma nova antena no final da lista. 
+
+Cria uma nova antena com os parâmetros fornecidos e a insere no final da lista.
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & A lista atual de antenas. \\
+\hline
+{\em freq} & A frequência da nova antena. \\
+\hline
+{\em x} & A coordenada X da nova antena. \\
+\hline
+{\em y} & A coordenada Y da nova antena. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A lista com a nova antena inserida no final.
+\end{DoxyReturn}
+Insere uma nova antena no final da lista.
+
+Esta função cria uma nova antena e a insere no final de uma lista existente de antenas.
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & Ponteiro para a lista de antenas existente. \\
+\hline
+{\em freq} & Frequência da nova antena. \\
+\hline
+{\em x} & Coordenada X da nova antena. \\
+\hline
+{\em y} & Coordenada Y da nova antena. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ponteiro para a lista com a antena inserida no final.
+\end{DoxyReturn}
+Após criar a nova antena, a função percorre a lista até encontrar o último elemento, e então insere a nova antena no final da lista. Se a lista estiver vazia, a nova antena torna-\/se o primeiro elemento. 
+
+Definition at line \mbox{\hyperlink{_funcoes_antena_8c_source_l00089}{89}} of file \mbox{\hyperlink{_funcoes_antena_8c_source}{Funcoes\+Antena.\+c}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{_funcoes_antena_8h_ac1554f383341b6169dbaed264bdfc8af_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{_funcoes_antena_8h_ac1554f383341b6169dbaed264bdfc8af_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_funcoes_antena_8h_a1da84b8b8a59606696bcd20017a24517}\index{FuncoesAntena.h@{FuncoesAntena.h}!InserirAntenaInicio@{InserirAntenaInicio}}
+\index{InserirAntenaInicio@{InserirAntenaInicio}!FuncoesAntena.h@{FuncoesAntena.h}}
+\doxysubsubsection{\texorpdfstring{InserirAntenaInicio()}{InserirAntenaInicio()}}
+{\footnotesize\ttfamily \label{_funcoes_antena_8h_a1da84b8b8a59606696bcd20017a24517} 
+\mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*} Inserir\+Antena\+Inicio (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*}}]{lista}{, }\item[{char}]{freq}{, }\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Insere uma nova antena no início da lista. 
+
+Cria uma nova antena com os parâmetros fornecidos e a insere no início da lista. A lista resultante terá a nova antena como o primeiro elemento.
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & A lista atual de antenas. \\
+\hline
+{\em freq} & A frequência da nova antena. \\
+\hline
+{\em x} & A coordenada X da nova antena. \\
+\hline
+{\em y} & A coordenada Y da nova antena. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A nova lista com a antena inserida no início.
+\end{DoxyReturn}
+Esta função cria uma nova antena e a insere no início de uma lista existente de antenas.
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & Ponteiro para a lista de antenas existente. \\
+\hline
+{\em freq} & Frequência da nova antena. \\
+\hline
+{\em x} & Coordenada X da nova antena. \\
+\hline
+{\em y} & Coordenada Y da nova antena. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ponteiro para a nova lista com a antena inserida no início.
+\end{DoxyReturn}
+Após criar a nova antena, a função insere-\/a no início da lista. Se a lista já contiver antenas, o ponteiro {\ttfamily prox} da nova antena será ajustado para apontar para a primeira antena da lista, e a nova antena será o primeiro elemento da lista. 
+
+Definition at line \mbox{\hyperlink{_funcoes_antena_8c_source_l00064}{64}} of file \mbox{\hyperlink{_funcoes_antena_8c_source}{Funcoes\+Antena.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{_funcoes_antena_8h_a1da84b8b8a59606696bcd20017a24517_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_funcoes_antena_8h_a6324d437ccd5fc28bbdac943c7831adc}\index{FuncoesAntena.h@{FuncoesAntena.h}!ListarAntenas@{ListarAntenas}}
+\index{ListarAntenas@{ListarAntenas}!FuncoesAntena.h@{FuncoesAntena.h}}
+\doxysubsubsection{\texorpdfstring{ListarAntenas()}{ListarAntenas()}}
+{\footnotesize\ttfamily \label{_funcoes_antena_8h_a6324d437ccd5fc28bbdac943c7831adc} 
+void Listar\+Antenas (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*}}]{lista}{}\end{DoxyParamCaption})}
+
+
+
+Lista as antenas presentes na lista ligada. 
+
+Exibe no terminal as informações de todas as antenas presentes na lista, incluindo a sua frequência e coordenadas.
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & A lista de antenas.\\
+\hline
+\end{DoxyParams}
+Lista as antenas presentes na lista ligada.
+
+Esta função percorre a lista de antenas e imprime as informações de cada antena.
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & Ponteiro para a lista de antenas a ser listada.\\
+\hline
+\end{DoxyParams}
+A função percorre a lista e imprime para cada antena a sua frequência e as suas coordenadas. 
+
+Definition at line \mbox{\hyperlink{_funcoes_antena_8c_source_l00177}{177}} of file \mbox{\hyperlink{_funcoes_antena_8c_source}{Funcoes\+Antena.\+c}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{_funcoes_antena_8h_a6324d437ccd5fc28bbdac943c7831adc_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_funcoes_antena_8h_a4367fd94080b1868035a976374aad312}\index{FuncoesAntena.h@{FuncoesAntena.h}!MostrarMapaAntenas@{MostrarMapaAntenas}}
+\index{MostrarMapaAntenas@{MostrarMapaAntenas}!FuncoesAntena.h@{FuncoesAntena.h}}
+\doxysubsubsection{\texorpdfstring{MostrarMapaAntenas()}{MostrarMapaAntenas()}}
+{\footnotesize\ttfamily \label{_funcoes_antena_8h_a4367fd94080b1868035a976374aad312} 
+void Mostrar\+Mapa\+Antenas (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*}}]{lista}{, }\item[{int}]{num\+Linhas}{, }\item[{int}]{num\+Colunas}{}\end{DoxyParamCaption})}
+
+
+
+Mostra um mapa com as antenas, de acordo com as suas coordenadas. 
+
+Exibe um mapa em formato de matriz, onde as posições das antenas são marcadas com a sua frequência. As posições vazias são representadas por pontos ({\ttfamily .}).
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & A lista de antenas. \\
+\hline
+{\em num\+Linhas} & O número de linhas do mapa. \\
+\hline
+{\em num\+Colunas} & O número de colunas do mapa.\\
+\hline
+\end{DoxyParams}
+Mostra um mapa com as antenas, de acordo com as suas coordenadas.
+
+Esta função cria um mapa representado por um vetor de caracteres, posiciona as antenas nas coordenadas fornecidas e imprime o mapa.
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & Ponteiro para a lista de antenas. \\
+\hline
+{\em num\+Linhas} & Número de linhas do mapa. \\
+\hline
+{\em num\+Colunas} & Número de colunas do mapa.\\
+\hline
+\end{DoxyParams}
+A função cria um mapa onde cada célula é representada por um ponto ({\ttfamily .}), e depois posiciona as antenas no mapa usando as coordenadas fornecidas. As antenas são representadas pela sua frequência. Após posicionar as antenas, o mapa é impresso na consola. 
+
+Definition at line \mbox{\hyperlink{_funcoes_antena_8c_source_l00201}{201}} of file \mbox{\hyperlink{_funcoes_antena_8c_source}{Funcoes\+Antena.\+c}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{_funcoes_antena_8h_a4367fd94080b1868035a976374aad312_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{_funcoes_antena_8h_ab9e381e49132732b43c8dbf14e2cbe3b}\index{FuncoesAntena.h@{FuncoesAntena.h}!RemoverAntena@{RemoverAntena}}
+\index{RemoverAntena@{RemoverAntena}!FuncoesAntena.h@{FuncoesAntena.h}}
+\doxysubsubsection{\texorpdfstring{RemoverAntena()}{RemoverAntena()}}
+{\footnotesize\ttfamily \label{_funcoes_antena_8h_ab9e381e49132732b43c8dbf14e2cbe3b} 
+\mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*} Remover\+Antena (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*}}]{lista}{, }\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Remove uma antena da lista, dado as suas coordenadas. 
+
+Remove a antena da lista que corresponde às coordenadas (x, y) fornecidas. Se a antena não for encontrada, a lista não é alterada.
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & A lista de antenas. \\
+\hline
+{\em x} & A coordenada X da antena a remover. \\
+\hline
+{\em y} & A coordenada Y da antena a remover. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A lista atualizada, com a antena removida, ou a lista original caso não encontre a antena.
+\end{DoxyReturn}
+Remove uma antena da lista, dado as suas coordenadas.
+
+Esta função percorre a lista de antenas e remove a antena cujas coordenadas X e Y coincidem com as fornecidas.
+
+
+\begin{DoxyParams}{Parameters}
+{\em lista} & Ponteiro para a lista de antenas existente. \\
+\hline
+{\em x} & Coordenada X da antena a ser removida. \\
+\hline
+{\em y} & Coordenada Y da antena a ser removida. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ponteiro para a lista com a antena removida, ou a lista original se não encontrar a antena.
+\end{DoxyReturn}
+A função percorre a lista de antenas procurando uma antena com as coordenadas especificadas. Se encontrada, a antena é removida da lista e a memória é liberada. Se a antena estiver no início da lista, a função ajusta o ponteiro da lista para o próximo elemento. 
+
+Definition at line \mbox{\hyperlink{_funcoes_antena_8c_source_l00120}{120}} of file \mbox{\hyperlink{_funcoes_antena_8c_source}{Funcoes\+Antena.\+c}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{_funcoes_antena_8h_ab9e381e49132732b43c8dbf14e2cbe3b_icgraph}
+\end{center}
+\end{figure}

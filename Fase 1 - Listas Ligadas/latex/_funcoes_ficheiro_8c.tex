@@ -1,0 +1,114 @@
+\doxysection{Funcoes\+Ficheiro.\+c File Reference}
+\hypertarget{_funcoes_ficheiro_8c}{}\label{_funcoes_ficheiro_8c}\index{FuncoesFicheiro.c@{FuncoesFicheiro.c}}
+
+
+Funções para manipulação de ficheiros contendo dados sobre antenas.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include "{}Structs.\+h"{}}\newline
+{\ttfamily \#include "{}Funcoes\+Antena.\+h"{}}\newline
+Include dependency graph for Funcoes\+Ficheiro.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_funcoes_ficheiro_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_funcoes_ficheiro_8c_af08ec37a8c99d747fb60fa15bc28678b}{\+\_\+\+CRT\+\_\+\+SECURE\+\_\+\+NO\+\_\+\+WARNINGS}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_funcoes_ficheiro_8c_ad77f28f5603add9acf90b83dd5ac0205}{Ler\+Ficheiro}} (char \texorpdfstring{$\ast$}{*}nome\+Ficheiro, \mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*}lista, int \texorpdfstring{$\ast$}{*}num\+Linhas, int \texorpdfstring{$\ast$}{*}num\+Colunas)
+\begin{DoxyCompactList}\small\item\em Lê um ficheiro e cria uma lista de antenas a partir das suas coordenadas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Funções para manipulação de ficheiros contendo dados sobre antenas. 
+
+Este ficheiro contém a função {\ttfamily Ler\+Ficheiro}, que é responsável por ler um ficheiro de texto contendo as localizações de antenas em um mapa e armazenar as informações em uma lista ligada.
+
+\begin{DoxyAuthor}{Author}
+Duarte "{}macrogod"{} Pereira 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025-\/03-\/30 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+Definition in file \mbox{\hyperlink{_funcoes_ficheiro_8c_source}{Funcoes\+Ficheiro.\+c}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_funcoes_ficheiro_8c_af08ec37a8c99d747fb60fa15bc28678b}\index{FuncoesFicheiro.c@{FuncoesFicheiro.c}!\_CRT\_SECURE\_NO\_WARNINGS@{\_CRT\_SECURE\_NO\_WARNINGS}}
+\index{\_CRT\_SECURE\_NO\_WARNINGS@{\_CRT\_SECURE\_NO\_WARNINGS}!FuncoesFicheiro.c@{FuncoesFicheiro.c}}
+\doxysubsubsection{\texorpdfstring{\_CRT\_SECURE\_NO\_WARNINGS}{\_CRT\_SECURE\_NO\_WARNINGS}}
+{\footnotesize\ttfamily \label{_funcoes_ficheiro_8c_af08ec37a8c99d747fb60fa15bc28678b} 
+\#define \+\_\+\+CRT\+\_\+\+SECURE\+\_\+\+NO\+\_\+\+WARNINGS}
+
+
+
+Definition at line \mbox{\hyperlink{_funcoes_ficheiro_8c_source_l00013}{13}} of file \mbox{\hyperlink{_funcoes_ficheiro_8c_source}{Funcoes\+Ficheiro.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_funcoes_ficheiro_8c_ad77f28f5603add9acf90b83dd5ac0205}\index{FuncoesFicheiro.c@{FuncoesFicheiro.c}!LerFicheiro@{LerFicheiro}}
+\index{LerFicheiro@{LerFicheiro}!FuncoesFicheiro.c@{FuncoesFicheiro.c}}
+\doxysubsubsection{\texorpdfstring{LerFicheiro()}{LerFicheiro()}}
+{\footnotesize\ttfamily \label{_funcoes_ficheiro_8c_ad77f28f5603add9acf90b83dd5ac0205} 
+\mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*} Ler\+Ficheiro (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{nome\+Ficheiro}{, }\item[{\mbox{\hyperlink{struct_antena}{Antena}} \texorpdfstring{$\ast$}{*}}]{lista}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{num\+Linhas}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{num\+Colunas}{}\end{DoxyParamCaption})}
+
+
+
+Lê um ficheiro e cria uma lista de antenas a partir das suas coordenadas. 
+
+Lê um ficheiro e insere as antenas na lista ligada.
+
+Esta função abre um ficheiro de texto contendo as posições das antenas representadas por caracteres, e armazena as antenas em uma lista ligada. A função também calcula o número de linhas e colunas presentes no mapa.
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome\+Ficheiro} & O nome do ficheiro a ser lido. \\
+\hline
+{\em lista} & A lista de antenas onde as novas antenas serão inseridas. \\
+\hline
+{\em num\+Linhas} & Ponteiro para a variável que receberá o número de linhas do mapa. \\
+\hline
+{\em num\+Colunas} & Ponteiro para a variável que receberá o número de colunas do mapa. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A lista de antenas atualizada.
+\end{DoxyReturn}
+A função lê o ficheiro linha por linha e processa cada caracter. Para cada antena (caracter que não seja \textquotesingle{}.\textquotesingle{}), a função chama a função {\ttfamily Inserir\+Antena\+Fim} para adicionar a antena à lista. As coordenadas X e Y são calculadas com base na posição do caracter no ficheiro. O número máximo de colunas é calculado durante a leitura do ficheiro, e o número de linhas é determinado pela quantidade de quebras de linha encontradas. 
+
+Definition at line \mbox{\hyperlink{_funcoes_ficheiro_8c_source_l00040}{40}} of file \mbox{\hyperlink{_funcoes_ficheiro_8c_source}{Funcoes\+Ficheiro.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_funcoes_ficheiro_8c_ad77f28f5603add9acf90b83dd5ac0205_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{_funcoes_ficheiro_8c_ad77f28f5603add9acf90b83dd5ac0205_icgraph}
+\end{center}
+\end{figure}

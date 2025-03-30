@@ -1,3 +1,16 @@
+/**
+ * @file main.c
+ * @brief Função principal do programa que lida com antenas e ficheiros.
+ *
+ * @details Este programa lê um ficheiro de texto contendo informações sobre antenas e
+ * posiciona-as numa lista ligada. Ele permite a visualização do mapa de antenas,
+ * a adição e remoção de antenas.
+ *
+ * @author Duarte "macrogod" Pereira
+ * @date 2024-03-29
+ * @version 1.0
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h> 
