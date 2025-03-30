@@ -203,10 +203,7 @@ void MostrarMapaAntenas(Antena* lista, int numLinhas, int numColunas)
     // Aloca memória para o mapa de uma vez só (um único bloco contínuo)
     char* mapa = (char*)malloc(numLinhas * numColunas * sizeof(char));
 
-    if (mapa == NULL) {
-        printf("Erro ao alocar memória para o mapa.\n");
-        return; // Se falhar a alocação, sai da função
-    }
+    if (mapa == NULL) return; // Se falhar a alocação, sai da função
 
     // Inicializa o mapa com pontos (.)
     for (int i = 0; i < numLinhas * numColunas; i++) {
