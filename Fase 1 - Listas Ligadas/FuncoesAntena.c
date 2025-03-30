@@ -66,8 +66,8 @@ Antena* InserirAntenaInicio(Antena* lista, char freq, int x, int y)
     Antena* novaAntena = CriarAntena(freq, x, y); // Cria nova antena
     if (novaAntena == NULL) return lista; // Se a criação falhar, retorna a lista sem modificação
 
-    novaAntena->prox = lista; // Aponta para a lista existente
-    return novaAntena; // Retorna a nova lista com a antena no início
+    novaAntena->prox = lista;
+    return novaAntena;
 }
 
 /**
